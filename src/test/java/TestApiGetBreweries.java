@@ -59,6 +59,7 @@ public class TestApiGetBreweries
                 .body("phone", equalTo("7077694495"));
 
     }
+
 }
 
 
