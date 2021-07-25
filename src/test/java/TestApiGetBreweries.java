@@ -1,11 +1,11 @@
 import io.restassured.RestAssured;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import static io.restassured.RestAssured.*;
 import java.util.logging.Logger;
-import static org.junit.Assert.*;
 import static org.hamcrest.Matchers.equalTo;
-
+import static org.junit.Assert.*;
 public class TestApiGetBreweries
 {
 
@@ -20,7 +20,7 @@ public class TestApiGetBreweries
     @Test
     public void testApiBreweriesStatus200()
     {
-        LOGGER.info("Se valida el eestado 200 del request");
+        LOGGER.info("Se valida el estado 200 del request");
         given().
                 queryParam("query", "lagunitas")
                 .get(baseURI + "/search")
@@ -57,6 +57,11 @@ public class TestApiGetBreweries
                 .body("name", equalTo("Lagunitas Brewing Co"))
                 .body("street", equalTo("1280 N McDowell Blvd"))
                 .body("phone", equalTo("7077694495"));
+    }
+
+    @After
+    public void afterClass() {
+        System.out.println("Fin del test");
     }
 }
 
