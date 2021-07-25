@@ -57,9 +57,7 @@ public class TestApiGetBreweries
                 .body("name", equalTo("Lagunitas Brewing Co"))
                 .body("street", equalTo("1280 N McDowell Blvd"))
                 .body("phone", equalTo("7077694495"));
-
     }
-
 }
 
 
