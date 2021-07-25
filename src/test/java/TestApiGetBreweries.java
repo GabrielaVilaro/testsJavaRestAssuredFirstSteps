@@ -49,7 +49,7 @@ public class TestApiGetBreweries
     @Test
     public void testApiBreweriesValidationComplete(){
 
-        LOGGER.info("Se valida que la respuesta contenga Lagunitas Brewing Co y estado California");
+        LOGGER.info("Se valida el id, el nombre, la calle y el teléfono de la cervecería");
         given()
                 .get(baseURI + "/12040")
                 .then()
