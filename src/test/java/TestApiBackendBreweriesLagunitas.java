@@ -48,7 +48,9 @@ public class TestApiBackendBreweriesLagunitas {
                 .body("id", equalTo(12040))
                 .body("name", equalTo("Lagunitas Brewing Co"))
                 .body("street", equalTo("1280 N McDowell Blvd"))
-                .body("phone", equalTo("7077694495")).extract().response();
+                .body("phone", equalTo("7077694495"))
+                .extract()
+                .response().then().log().all();
             }
 
     @After
